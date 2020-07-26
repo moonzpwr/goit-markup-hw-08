@@ -592,6 +592,9 @@ main > section,
     position: static;
     background-color: transparent;
     width: 100%;
+    background-color: transparent;
+    opacity: 1;
+    pointer-events: all;
   }
   .menu-button svg {
     display: none;
@@ -897,6 +900,7 @@ main > section,
   overflow: hidden;
   max-height: 320px;
   display: block;
+  margin-bottom: 30px;
 }
 
 .team-soc-networks {
