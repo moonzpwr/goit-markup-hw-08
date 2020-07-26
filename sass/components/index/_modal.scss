@@ -1,0 +1,239 @@
+.backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(33, 33, 33, 0.2);
+  transition: transform 250ms $main-timing-function,
+    opacity 250ms $main-timing-function;
+}
+
+.modal {
+  position: relative;
+  background-color: white;
+  margin-top: 93px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  border-bottom: 1px solid transparent;
+  @media screen and (min-width: $mobile-phones) {
+    width: $mobile-phones;
+  }
+
+  & form {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  & b {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: $dark-text-color;
+  }
+}
+
+.form-input + span {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  transition: transform 250ms $main-timing-function,
+    color 250ms $main-timing-function;
+}
+
+.form-input:focus + span {
+  transform: translateY(-40px) translateX(-25px);
+  color: $main-accent;
+}
+
+.form-input:not(:placeholder-shown) + span {
+  transform: translateY(-40px) translateX(-25px);
+  color: $main-accent;
+}
+
+.form-textarea:focus + span {
+  transform: translateY(-35px) translateX(-15px);
+  color: $main-accent;
+}
+
+.form-textarea:not(:placeholder-shown) + span {
+  transform: translateY(-35px) translateX(-15px);
+  color: $main-accent;
+}
+
+.form-field:focus-within .modal-icon {
+  fill: $main-accent;
+}
+.form-input:not(:placeholder-shown) ~ .modal-icon {
+  fill: $main-accent;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  transition: fill 250ms $main-timing-function;
+}
+
+.form-textarea + span {
+  position: absolute;
+  top: 12px;
+  left: 16px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  transition: color 250ms $main-timing-function,
+    transform 250ms $main-timing-function;
+}
+
+.terms {
+  color: $main-accent;
+  text-decoration: underline;
+}
+
+.close-button {
+  padding: 9px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  line-height: 0px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.close-button svg {
+  transition: fill 250ms $main-timing-function;
+}
+
+.close-button:focus svg,
+.close-button:hover svg {
+  fill: $main-accent;
+}
+
+.submit-button {
+  width: 200px;
+  padding: 10px 55px;
+  margin-top: 30px;
+
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  border-radius: 4px;
+  border: none;
+  background-color: $main-accent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-input,
+.form-field textarea {
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+.form-field {
+  margin-top: 30px;
+  position: relative;
+
+  & textarea {
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(1.1);
+}
+
+.custom-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+.checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+
+  &:checked + .custom-checkbox {
+    border-color: transparent;
+    background-image: url(../images/icons/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
+    background-color: $main-accent;
+  }
+}
+
+.accept {
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+@media screen and (min-width: $PCs) {
+  .accept {
+    font-size: 14px;
+  }
+  .form-input,
+  .form-field textarea {
+    width: 448px;
+  }
+
+  .modal {
+    position: absolute;
+    top: 221px;
+    width: 528px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0px;
+
+    & form {
+      margin-left: 30px;
+      margin-right: 50px;
+    }
+  }
+  .form-textarea + label {
+    margin-left: -16px;
+  }
+
+  .modal-icon {
+    left: 16px;
+  }
+
+  .form-input + label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+  }
+}

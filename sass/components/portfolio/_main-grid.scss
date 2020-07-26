@@ -1,0 +1,132 @@
+.main-grid {
+  // display: flex;
+  // flex-wrap: wrap;
+
+  // & li {
+  //   width: calc((100% - 60px) / 3);
+  // }
+
+  // & li:not(:nth-last-child(-n + 3)) {
+  //   margin-bottom: 30px;
+  // }
+
+  // & li:not(:nth-child(3n)) {
+  //   margin-right: 30px;
+  // }
+
+  & li:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.project-title {
+  color: $dark-text-color;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.projects-style {
+  color: $main-text-color;
+
+  text-align: left;
+
+  & img {
+    width: 100%;
+    display: block;
+  }
+
+  & h2 {
+    margin-bottom: 4px;
+    margin-top: 0px;
+    margin-left: 24px;
+
+    color: $dark-text-color;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  }
+
+  & .project-type {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    margin-left: 24px;
+
+    color: $main-text-color;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+  }
+  & p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+
+    color: white;
+  }
+}
+
+.animation-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  margin: 0px;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  transition: opacity 250ms $main-timing-function,
+    transform 250ms $main-timing-function;
+}
+
+.main-grid li:hover .card-text-content {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+}
+
+.main-grid li:hover .hover-content {
+  transform: translateX(0) translateY(-100%);
+}
+
+.card-text-content {
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  padding-top: 20px;
+  transition: box-shadow 250ms $main-timing-function;
+}
+
+@media screen and (min-width: $tablets) {
+  .main-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    & li {
+      width: calc((100% - 2 * 30px) / 2);
+      margin: 15px;
+    }
+
+    & li:not(:last-child) {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (min-width: $PCs) {
+  .main-grid {
+    & li {
+      width: calc((100% - 3 * 30px) / 3);
+      margin: 15px;
+    }
+  }
+}

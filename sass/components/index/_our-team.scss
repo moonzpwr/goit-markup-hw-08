@@ -1,0 +1,116 @@
+.our-team-section {
+  max-width: 1600px;
+  background-color: #f5f4fa;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.team-card {
+  background: white;
+  margin-bottom: 30px;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+  min-width: 270px;
+
+  & img {
+    display: block;
+    // margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+  }
+
+  & picture {
+    overflow: hidden;
+    max-height: 320px;
+    display: block;
+  }
+}
+
+.team-soc-networks {
+  padding-bottom: 24px;
+  justify-content: center;
+  display: flex;
+
+  & li,
+  & a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: block;
+
+    transition: background-color 250ms $main-timing-function;
+  }
+
+  & a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  & svg {
+    fill: #afb1b8;
+    align-items: center;
+
+    transition: fill 250ms $main-timing-function;
+  }
+
+  & li:hover svg,
+  & a:focus svg {
+    fill: white;
+  }
+
+  & li:hover,
+  & a:focus {
+    background-color: $main-accent;
+  }
+}
+
+.team-name {
+  margin-bottom: 10px;
+  margin-top: 0px;
+
+  color: $dark-text-color;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.proffesion {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  display: block;
+  height: 19px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+@media screen and (min-width: $tablets) {
+  .our-team-section .our-team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  .team-card {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: $PCs) {
+  .our-team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .team-card {
+    width: calc((100% - 4 * 30px) / 4);
+  }
+}

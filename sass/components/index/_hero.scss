@@ -1,0 +1,72 @@
+.main-pic {
+  text-align: center;
+
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url('../images/header-img.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .box {
+      background-image: url('../../../images/header-img@2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: $PCs) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
+
+  h1 {
+    margin: 0px;
+    padding: 0px;
+
+    color: white;
+
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $mobile-phones) {
+      font-size: 26px;
+      line-height: 1.62;
+    }
+    @media screen and (min-width: $PCs) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+}
+
+.button-primary {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 4px;
+  margin-top: 30px;
+  border: none;
+
+  background-color: $background-accent;
+  color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
