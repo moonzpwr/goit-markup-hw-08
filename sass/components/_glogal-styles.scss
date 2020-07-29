@@ -48,9 +48,8 @@ footer {
 }
 
 // BRAKEPOINTS
-main > section,
+.main-pic,
 .primary-footer-container,
-.navigation-container,
 .section-container {
   margin-right: auto;
   margin-left: auto;
@@ -80,8 +79,6 @@ main > section,
 .section-container {
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
 
