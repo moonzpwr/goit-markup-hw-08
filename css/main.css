@@ -312,7 +312,6 @@ footer {
   background-color: #2f303a;
 }
 
-.main-pic,
 .primary-footer-container,
 .section-container {
   margin-right: auto;
@@ -320,7 +319,6 @@ footer {
 }
 
 @media screen and (min-width: 480px) {
-  .main-pic,
   .primary-footer-container,
   .section-container {
     width: 480px;
@@ -328,7 +326,6 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  .main-pic,
   .primary-footer-container,
   .section-container {
     width: 768px;
@@ -336,7 +333,6 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
-  .main-pic,
   .primary-footer-container,
   .section-container {
     width: 1200px;
